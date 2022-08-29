@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Zahlengenerator (Quadrierer)</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+
+			// Programmiere hier calc
+			
+			function clicked() {
+				let i=1;
+                let vinput=document.getElementById("idZahl").value;
+				let vQuadrat;
+                let vTriple;
+                let vOutput="";
+
+               
+                   
+				vOutput=vOutput+ "<table border=1>";
+				vOutput=vOutput+ "<tr><th>" + "x" + "</th><th>" + "x2" + "</th><th>" + "x3" + "</th></tr>";
+                while (i<=vinput){
+					vQuadrat=i*i;
+                    vTriple=i*i*i;
+
+                
+                    vOutput= vOutput + "<tr><td>" + i + "</td><td>" + vQuadrat + "</td><td>" + vTriple + "</td></tr>";
+                    i++;
+                  
+                }
+                    document.getElementById("idOutput").innerHTML = vOutput;
+                
+                
+                
+			}
+	
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Zahlengenerator (Quadrierer)</h1>
+		Gib eine Zahl ein: <input id="idZahl" type="text" value="10"><br /><br />
+		<button onClick="clicked();">Berechne!</button><br /><br />
+		<div id="idOutput"></div>
+	</body>
+</html>
